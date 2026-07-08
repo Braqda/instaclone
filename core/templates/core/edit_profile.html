@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-md w-full bg-white border border-gray-200 rounded-2xl p-6 shadow-sm space-y-4">
+        <div class="flex items-center space-x-3 border-b border-gray-100 pb-3">
+            <a href="/" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <i class="fa-solid fa-arrow-left text-lg"></i>
+            </a>
+            <h2 class="text-lg font-bold text-gray-800">Edit Your Profile</h2>
+        </div>
+
+        <form method="POST" enctype="multipart/form-data" class="space-y-4">
+            {% csrf_token %}
+            
+            <div class="space-y-3">
+                {{ form.as_p }}
+            </div>
+
+            <button type="submit" class="w-full py-2.5 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl text-sm transition-colors shadow-sm mt-2">
+                Save Changes
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>
+

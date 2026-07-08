@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Admin Panel</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased min-h-screen">
+
+    <nav class="sticky top-0 bg-white border-b border-gray-200 z-50 shadow-sm">
+        <div class="max-w-md mx-auto px-4 h-14 flex items-center justify-between">
+            <a href="{% url 'dashboard' %}" class="text-gray-600 hover:text-gray-900 flex items-center gap-1 text-sm font-semibold">
+                <i class="fa-solid fa-chevron-left"></i> Dashboard
+            </a>
+            <h1 class="text-md font-bold text-red-800 tracking-tight">System Admin</h1>
+            <div class="w-10"></div>
+        </div>
+    </nav>
+
+    <main class="max-w-md mx-auto px-4 py-6 space-y-4">
+        <div class="bg-red-50/60 border border-red-200 rounded-xl p-5 shadow-sm text-center space-y-2">
+            <div class="w-12 h-12 bg-red-100 text-red-700 rounded-full flex items-center justify-center text-lg mx-auto">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h2 class="text-base font-bold text-red-900">Ultimate Admin Panel</h2>
+            <p class="text-xs text-red-700 leading-relaxed">
+                Platform database root configuration layers enabled. This space is strictly reserved for managing core database records and systemic variables.
+            </p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-xl divide-y divide-gray-100 overflow-hidden shadow-sm">
+            <a href="/admin/" class="flex items-center justify-between p-4 hover:bg-gray-50 text-sm font-semibold text-gray-700">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-database text-gray-400"></i> Native Django Admin Dashboard</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-300"></i>
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
+

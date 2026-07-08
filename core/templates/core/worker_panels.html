@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Moderation Panel</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased min-h-screen">
+
+    <nav class="sticky top-0 bg-white border-b border-gray-200 z-50 shadow-sm">
+        <div class="max-w-md mx-auto px-4 h-14 flex items-center justify-between">
+            <a href="{% url 'dashboard' %}" class="text-gray-600 hover:text-gray-900 flex items-center gap-1 text-sm font-semibold">
+                <i class="fa-solid fa-chevron-left"></i> Dashboard
+            </a>
+            <h1 class="text-md font-bold text-amber-800 tracking-tight">Staff Moderation</h1>
+            <div class="w-10"></div>
+        </div>
+    </nav>
+
+    <main class="max-w-md mx-auto px-4 py-6 space-y-4">
+        <div class="bg-amber-50/60 border border-amber-200 rounded-xl p-5 shadow-sm text-center space-y-2">
+            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center text-lg mx-auto">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h2 class="text-base font-bold text-amber-900">Worker Console Active</h2>
+            <p class="text-xs text-amber-700 leading-relaxed">
+                Use this control surface to monitor user-generated items, audit open chat logs, and delete platform compliance violations.
+            </p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm text-center text-sm text-gray-400 py-12">
+            <i class="fa-solid fa-inbox text-2xl mb-2 block text-gray-300"></i>
+            No pending content flag reports available.
+        </div>
+    </main>
+
+</body>
+</html>
+
